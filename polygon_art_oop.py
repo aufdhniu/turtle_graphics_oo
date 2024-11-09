@@ -22,7 +22,7 @@ class Shape:
     def random_position(self):
         return (random.randint(-300, 300), random.randint(-200, 200))
 
-    def draw_polygon(self, num_sides, size, position, color, border_size=1, orientation=0):
+    def draw_polygon(self, num_sides, size, position, color, border_size= 1, orientation=0):
         self.t.penup()
         self.t.goto(position)
         self.t.setheading(orientation)
@@ -68,6 +68,13 @@ class RecursiveTriangle(ArtGenerator):
 
             for i in range(3):
                 self.shape.draw_polygon(3, size, pos, color, border_size)
+                self.shape.t.penup()
+                self.shape.t.forward(size*(1-reduction_ratio)/2)
+                self.shape.t.left(90)
+                self.shape.t.forward(size*(1-reduction_ratio)/2)
+                self.shape.t.right(90)
+                x, y = self.shape.t.pos()
+                pos = (x, y)
                 size *= reduction_ratio
 
 class SquareArt(ArtGenerator):
@@ -91,6 +98,13 @@ class RecursiveSquare(ArtGenerator):
 
             for i in range(3):
                 self.shape.draw_polygon(4, size, pos, color, border_size)
+                self.shape.t.penup()
+                self.shape.t.forward(size*(1-reduction_ratio)/2)
+                self.shape.t.left(90)
+                self.shape.t.forward(size*(1-reduction_ratio)/2)
+                self.shape.t.right(90)
+                x, y = self.shape.t.pos()
+                pos = (x, y)
                 size *= reduction_ratio
 
 class PentagonArt(ArtGenerator):
@@ -114,6 +128,13 @@ class RecursivePentagon(ArtGenerator):
 
             for i in range(3):
                 self.shape.draw_polygon(5, size, pos, color, border_size)
+                self.shape.t.penup()
+                self.shape.t.forward(size*(1-reduction_ratio)/2)
+                self.shape.t.left(90)
+                self.shape.t.forward(size*(1-reduction_ratio)/2)
+                self.shape.t.right(90)
+                x, y = self.shape.t.pos()
+                pos = (x, y)
                 size *= reduction_ratio
 
 class RandomArt(ArtGenerator):
@@ -139,6 +160,13 @@ class RecursiveRandom(ArtGenerator):
 
             for i in range(3):
                 self.shape.draw_polygon(num_sides, size, pos, color, border_size)
+                self.shape.t.penup()
+                self.shape.t.forward(size*(1-reduction_ratio)/2)
+                self.shape.t.left(90)
+                self.shape.t.forward(size*(1-reduction_ratio)/2)
+                self.shape.t.right(90)
+                x, y = self.shape.t.pos()
+                pos = (x, y)
                 size *= reduction_ratio
 
 class RecursiveTrueRandom(ArtGenerator):
@@ -153,6 +181,13 @@ class RecursiveTrueRandom(ArtGenerator):
 
             for i in range(random.randint(1, 3)):
                 self.shape.draw_polygon(num_sides, size, pos, color, border_size)
+                self.shape.t.penup()
+                self.shape.t.forward(size*(1-reduction_ratio)/2)
+                self.shape.t.left(90)
+                self.shape.t.forward(size*(1-reduction_ratio)/2)
+                self.shape.t.right(90)
+                x, y = self.shape.t.pos()
+                pos = (x, y)
                 size *= reduction_ratio
 
 
