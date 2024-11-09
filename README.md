@@ -1,5 +1,6 @@
 # OO code using turtle graphics
-- From the starting code, polygon_art.py, you are to write an OO program that generates different pieces of art works
-- Fork, then, clone this repo
-- Read the instructions given in the course's Google Classroom and start coding
-- Once you are done, push your final code to your Github repo and modify this README to report on the work you have done
+- use abstractmethod
+- create class shape that have method to set up the background, color and position
+- create artgenerator class to make it draw picture
+- call other sub-class that have Artgenerator as master class
+- have some problems in sub-class that require 2 reduction_polygon inside big polygon, I can't make it in middle
